@@ -1,0 +1,34 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid greenyellow;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            width: 100%;
+            height: 50px;
+            border: red 1px solid;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <input type="text" class="box">
+    </div>
+</body>
+</html>
+```
+如上面html展示，内部带有边框的box设置内外边距后导致盒子变大，超出预想的宽高，这个时候使用box-sizing:border-box,让边框，内外边距在里面，缩小的是content的大小。大部分浏览器支持，firfox例外要使用：
+_moz-box-sizing
